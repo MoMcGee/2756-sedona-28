@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [McGee](https://up.htmlacademy.ru/htmlcss/28/user/2756).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Устинов](https://htmlacademy.ru/profile/id441489).
 
 ---
 
