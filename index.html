@@ -22,8 +22,7 @@
   <main>
     <div class="promo_image">
       <h1 class="visually_hidden">Добро пожаловать в Седону!</h1>
-      <img src="main_bg.jpg" alt="Вид на горы вблизи Седоны">
-      <img src="welcome.png" alt="">
+      <!--Фоновое изображение-->
     </div>
     <section class="reasons">
       <div class="reasons_intro">
@@ -36,7 +35,7 @@
     <section class="hotels_search">
       <h2>Заинтересовались?</h2>
       <p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <button class="btn btn_search">Поиск гостиницы в Седоне</button>
+      <button class="btn hotel_search">Поиск гостиницы в Седоне</button>
 
       <div class="map">
         <img src="arizona_map.jpg" alt="Карта Седоны">
@@ -56,6 +55,22 @@
     <div class="copyright"><a href="https://htmlacademy.ru/intensive/htmlcss">Website by HTML Academy</a></div>
   </footer>
 
-  <section class="modal modal_search"></section>
+  <section class="modal modal_search">
+    <form action="" class="search_form">
+      <div class="search_form_row">
+        <label for="">Дата заезда</label><input type="text">
+      </div>
+      <div class="search_form_row">
+        <label for="">Дата выезда</label><input type="text">
+      </div>
+      <div class="search_form_row">
+        <label for="">Взрослые</label>
+        <input type="text">
+        <label for="">Дети</label>
+        <input type="text">
+      </div>
+      <button class="btn search_btn">Найти</button>
+    </form>
+  </section>
 </body>
 </html>
