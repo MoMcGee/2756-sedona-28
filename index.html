@@ -30,6 +30,61 @@
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </div>
       <div class="reason_items">
+        <div class="reason_row">
+          <div class="reason_item_left">
+            <div class="reason_picture">
+              <img src="img/reason_1.jpg" alt="Фотография города">
+            </div>
+            <div class="reason">
+              <h3 class="reason_title">Настоящий городок</h3>
+              <p class="reason_number">— №1 —</p>
+              <p class="reason_text">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
+          </div>
+        </div>
+        <div class="reason_row">
+          <div class="reason_item_card">
+            <h3 class="reason_title">Жильё</h3>
+            <p class="reason_text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          </div>
+          <div class="reason_item_card">
+            <h3 class="reason_title">Еда</h3>
+            <p class="reason_text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          </div>
+          <div class="reason_item_card">
+            <h3 class="reason_title">Сувениры</h3>
+            <p class="reason_text">Не только китайского, но и местного производства!</p>
+          </div>
+        </div>
+        <div class="reason_row">
+          <div class="reason_item_right">
+            <div class="reason">
+              <h3 class="reason_title">Там есть  Мост дьявола</h3>
+              <p class="reason_number">— №2 —</p>
+              <p class="reason_text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            </div>
+            <div class="reason_picture">
+              <img src="img/reason_2.jpg" alt="Фотография Моста Дьявола">
+            </div>
+          </div>
+        </div>
+        <div class="reason_row">
+          <div class="reason_item_card">
+            <h3 class="reason_title">Небольшая площадь</h3>
+            <p class="reason_number">— №3 —</p>
+            <p class="reason_text">все достопримечательности находятся очень близко</p>
+          </div>
+          <div class="reason_item_card">
+            <h3 class="reason_title">Красивая дорога</h3>
+            <p class="reason_number">— №4 —</p>
+            <p class="reason_text">Ехать в седону из лас-вегаса совсем не скучно!</p>
+          </div>
+          <div class="reason_item_card">
+            <h3 class="reason_title">Мало туристов</h3>
+            <p class="reason_number">— №5 —</p>
+            <p class="reason_text">Большинство едет в Гранд Каньон и толпится там</p>
+          </div>
+        </div>
       </div>
     </section>
     <section class="hotels_search">
@@ -38,7 +93,7 @@
       <button class="btn hotel_search">Поиск гостиницы в Седоне</button>
 
       <div class="map">
-        <img src="arizona_map.jpg" alt="Карта Седоны">
+        <img src="img/map.jpg" alt="Карта Седоны">
       </div>
     </section>
   </main>
@@ -56,21 +111,22 @@
   </footer>
 
   <section class="modal modal_search">
-    <form action="" class="search_form">
+    <form action="https://echo.htmlacademy.ru" method="get" class="search_form">
       <div class="search_form_row">
-        <label for="">Дата заезда</label><input type="text">
+        <label for="arrival_date">Дата заезда</label>
+        <input type="text" name="arrival" id="arrival_date">
       </div>
       <div class="search_form_row">
-        <label for="">Дата выезда</label><input type="text">
+        <label for="departure_date">Дата выезда</label>
+        <input type="text" name="departure" id="departure_date">
       </div>
       <div class="search_form_row">
-        <label for="">Взрослые</label>
-        <input type="text">
-        <label for="">Дети</label>
-        <input type="text">
+        <label for="adult">Взрослые</label>
+        <input type="text" name="adult" id="adult">
+        <label for="child">Дети</label>
+        <input type="text" name="child" id="child">
       </div>
       <button class="btn search_btn">Найти</button>
-    </form>
   </section>
 </body>
 </html>
