@@ -8,7 +8,7 @@
   <header class="page_header">
     <nav class="main_menu">
       <a class="logo_image" href="index.html">
-        <img src="logo.png" alt="Логотип">
+        <img src="img/logo.svg" alt="Логотип">
       </a>
       <ul>
         <li><a href="">Информация</a></li>
@@ -19,13 +19,73 @@
     </nav>
   </header>
   <main>
-    <section class="filters"></section>
+    <section class="filters">
+      <h2 class="visually_hidden">Фильтр поиска гостиницы</h2>
+      <form action="https://echo.htmlacademy.ru" method="get" class="filter">
+        <fieldset class="filter_item">
+          <legend>Инфраструктура:</legend>
+          <ul>
+            <li class="filter_option">
+              <input type="radio" class="visually_hidden filter_input filter_input_radio" name="amenities_option" id="pool_option">
+              <label for="pool_option">Бассейн</label>
+
+            </li>
+            <li class="filter_option">
+            <input type="radio" class="visually_hidden filter_input filter_input_radio" name="amenities_option" id="parking_option">
+              <label for="parking_option">Парковка</label>
+            </li>
+            <li class="filter_option">
+              <input type="radio" class="visually_hidden filter_input filter_input_radio" name="amenities_option" id="wifi_option">
+              <label for="wifi_option">Wi-Fi</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter_item">
+          <legend>Тип жилья:</legend>
+          <ul>
+            <li class="filter_option">
+              <input type="radio" class="visually_hidden filter_input filter_input_radio" name="lodging type" id="hotel_option">
+              <label for="hotel_option">Гостиница</label>
+            </li>
+            <li class="filter_option">
+            <input type="radio" class="visually_hidden filter_input filter_input_radio" name="lodging type" id="motel_option">
+              <label for="motel_option">Мотель</label>
+            </li>
+            <li class="filter_option">
+            <input type="radio" class="visually_hidden filter_input filter_input_radio" name="lodging type" id="apartments_option">
+              <label for="apartments_option">Апартаменты</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter_item">
+          <legend>Стоимость в сутки (Р):</legend>
+          <div class="price_controls">
+          <label for="" class="min_price">от <input name="min_price" type="text" value="0"></label>
+          <label for="" class="max_price">до <input name="max_price" type="text" value="3000"></label>
+        </div>
+        <!--Здесь будет выбор диапазона цен -->
+        </fieldset>
+        <button class="btn filter_btn">Показать</button>
+      </form>
+    </section>
     <section class="results">
-      <div class="sorts_panel"></div>
+      <div class="sorts_panel">
+        <div class="search_results">
+          <p>Найдено: 3</p>
+        </div>
+        <div class="sort_controls">
+      <span class="sort_title">Сортировать</span>
+      <a href="#" class="sort_checked">По цене</a>
+      <a href="#">По типу</a>
+      <a href="#">По рейтингу</a>
+      <a href="#" class="icon_up sort_checked"><span class="visually_hidden">В порядке возрастания</span></a>
+      <a href="#" class="icon_down"><span class="visually_hidden">В порядке убывания</span></a>
+    </div>
+      </div>
       <ul class="result_items">
         <li class="result_item">
           <div class="hotel_image">
-            <img src="amara_resort" alt="Гостиница Amara Resort & Spa">
+            <img src="img/amara_hotel.jpg" alt="Гостиница Amara Resort & Spa">
           </div>
           <div class="hotel_info">
             <h2 class="hotel_title">Amara Resort & Spa</h2>
@@ -46,7 +106,7 @@
         </li>
         <li class="result_item">
           <div class="hotel_image">
-            <img src="desert_quail_inn.jpg" alt="фото мотеля Desert Quail Inn">
+            <img src="img/desert_quail_inn.jpg" alt="фото мотеля Desert Quail Inn">
           </div>
           <div class="hotel_info">
             <h2 class="hotel_title">Desert Quail Inn</h2>
@@ -66,7 +126,7 @@
         </li>
         <li class="result_item">
           <div class="hotel_image">
-            <img src="villas_at_poco.jpg" alt="Фото апартаментов Villas at Poco">
+            <img src="img/villas.jpg" alt="Фото апартаментов Villas at Poco">
           </div>
           <div class="hotel_info">
             <h2 class="hotel_title">Villas at Poco Diablo</h2>
