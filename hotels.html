@@ -8,7 +8,7 @@
   <header class="page_header">
     <nav class="main_menu">
       <a class="logo_image" href="index.html">
-        <img src="img/logo.svg" alt="Логотип Седоны, переход на главную страницу сайта">
+        <img src="img/logo.svg" width="138" height="70" alt="Логотип Седоны, переход на главную страницу сайта">
       </a>
       <ul>
         <li><a href="">Информация</a></li>
@@ -60,8 +60,9 @@
         <fieldset class="filter_item">
           <legend>Стоимость в сутки (Р):</legend>
           <div class="price_controls">
-          <label for="" class="min_price">от <input name="min_price" type="text" value="0"></label>
-          <label for="" class="max_price">до <input name="max_price" type="text" value="3000"></label>
+          <label for="min_price" class="min_price">
+            от <input name="min_price" type="text" value="0" id="min_price"></label>
+          <label for="max_price" class="max_price">до <input name="max_price" type="text" value="3000" id="max_price"></label>
         </div>
         <!--Здесь будет выбор диапазона цен -->
         </fieldset>
@@ -87,7 +88,7 @@
         <ul class="result_items">
           <li class="result_item">
             <div class="hotel_image">
-              <img src="img/amara_hotel.jpg" alt="Фото гостиницы Amara Resort & Spa">
+              <img src="img/amara_hotel.jpg" width="135" height="90" alt="Фото гостиницы Amara Resort & Spa">
             </div>
             <div class="hotel_info">
               <h2 class="hotel_title">Amara Resort & Spa</h2>
@@ -108,7 +109,7 @@
           </li>
           <li class="result_item">
             <div class="hotel_image">
-              <img src="img/desert_quail_inn.jpg" alt="фото мотеля Desert Quail Inn">
+              <img src="img/desert_quail_inn.jpg" width="135" height="90" alt="фото мотеля Desert Quail Inn">
             </div>
             <div class="hotel_info">
               <h2 class="hotel_title">Desert Quail Inn</h2>
@@ -128,7 +129,7 @@
           </li>
           <li class="result_item">
             <div class="hotel_image">
-              <img src="img/villas.jpg" alt="Фото апартаментов Villas at Poco">
+              <img src="img/villas.jpg" width="135" height="90" alt="Фото апартаментов Villas at Poco">
             </div>
             <div class="hotel_info">
               <h2 class="hotel_title">Villas at Poco Diablo</h2>
@@ -155,7 +156,7 @@
   <footer class="page_footer">
     <div class="contacts">
       <a class="hashtag" href="#">#visitSEDONA</a>
-      <p class="phone">тел: +7(495) 666-01-66</p>
+      <a href="tel:+7495660166" class="phone">тел: +7(495) 666-01-66</a>
     </div>
     <div class="social_links">
       <a href="#" class="social_twitter" aria-label="Twitter">Twitter</a>
