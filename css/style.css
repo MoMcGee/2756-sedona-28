@@ -49,6 +49,14 @@ clip: rect(0 0 0 0);
 overflow: hidden;
 }
 
+.container {
+  display: grid;
+  width: 1200px;
+  margin: 0 auto;
+  background-color: var(--basic_white);
+  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+}
+
 .main_menu {
   line-height: 26px;
   color: var(--basic_black);
