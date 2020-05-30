@@ -203,7 +203,7 @@ img {
 
 .sort_controls a {
   color: var(--opacity_black);
-  border-bottom: 1px dashed #81B3D2;
+  border-bottom: 1px dashed var(--basic_blue);
 }
 
 .sort_controls a:hover,
