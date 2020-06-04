@@ -163,10 +163,7 @@ overflow: hidden;
 }
 
 .reason_items {
-  /* Временная заглушка */
-  min-height: 1100px;
-  background: linear-gradient(0deg, #F6A8A6, #F6A8A6);
-  outline: 1px solid red;
+
 }
 
 .reason_item_left,
