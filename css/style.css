@@ -55,9 +55,6 @@ overflow: hidden;
 }
 
 .container {
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
   min-height: 100%;
   width: 1200px;
   margin: 0 auto;
@@ -138,9 +135,10 @@ overflow: hidden;
 .promo_image {
   min-height: 509px;
   background-image:
+    url(../img/mask.png),
     url(../img/main_bg.jpg);
-  background-position: center top;
-  background-repeat: no-repeat;
+  background-position: center bottom, center top;
+  background-repeat: no-repeat no-repeat;
 }
 
 .reasons_intro {
@@ -163,21 +161,27 @@ overflow: hidden;
 }
 
 .reason_items {
-  /* Временная заглушка */
-  min-height: 1100px;
-  background: linear-gradient(0deg, #F6A8A6, #F6A8A6);
-  outline: 1px solid red;
+  display: grid;
+  grid-template-rows: 256px 330px 256px 256px;
+  grid-template-columns: 400px 400px 400px;
 }
 
-.reason_item_left,
-.reason_item_right {
-  color: var(--basic_white);
-  background-color: var(--basic_blue);
+.reason_image_right {
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+}
+
+.reason_image_left {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
 }
 
 
 
 .reason_item_card {
+  padding: 0 51px;
+  padding-top: 47px;
+  padding-bottom: 54px;
   text-align: center;
 }
 
@@ -195,14 +199,23 @@ overflow: hidden;
   color: var(--dark_gray);
 }
 
-.reason_item_left .reason_text,
-.reason_item_right .reason_text {
+.card_item_blue {
+  color: var(--basic_white);
+  background-color: var(--basic_blue);
+}
+
+.card_item_blue .reason_text {
   color: var(--basic_white);
 }
 
-.reason_row:last-child {
+.card_item_white {
+
+}
+
+.card_item_grey {
   background-color: #eeeeee;
 }
+
 
 .hotels_search {
   text-align: center;
@@ -407,12 +420,7 @@ overflow: hidden;
   color: #666666;
 }
 
-.map {
-  /* Временная заглушка */
-  min-height: 476px;
-  background: linear-gradient(0deg, #F6A8A6, #F6A8A6);
-  outline: 1px solid red;
-}
+
 
 .page_footer {
   display: grid;
