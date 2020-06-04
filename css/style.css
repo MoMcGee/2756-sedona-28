@@ -55,9 +55,6 @@ overflow: hidden;
 }
 
 .container {
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
   min-height: 100%;
   width: 1200px;
   margin: 0 auto;
