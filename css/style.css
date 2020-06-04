@@ -165,15 +165,9 @@ overflow: hidden;
 
 .reason_items {
   display: grid;
-  grid-template-rows: 256px 330px 256px 330px;
+  grid-template-rows: 256px 330px 256px 256px;
   grid-template-columns: 400px 400px 400px;
 }
-
-/*.reason_item_left,
-.reason_item_right {
-  color: var(--basic_white);
-  background-color: var(--basic_blue);
-}*/
 
 .reason_image_right {
   grid-column: 2 / -1;
@@ -208,14 +202,23 @@ overflow: hidden;
   color: var(--dark_gray);
 }
 
-/*.reason_item_left .reason_text,
-.reason_item_right .reason_text {
+.card_item_blue {
+  color: var(--basic_white);
+  background-color: var(--basic_blue);
+}
+
+.card_item_blue .reason_text {
   color: var(--basic_white);
 }
-*/
-/*.reason_row:last-child {
+
+.card_item_white {
+
+}
+
+.card_item_grey {
   background-color: #eeeeee;
-}*/
+}
+
 
 .hotels_search {
   text-align: center;
@@ -420,12 +423,7 @@ overflow: hidden;
   color: #666666;
 }
 
-.map {
-  /* Временная заглушка */
-  min-height: 476px;
-  background: linear-gradient(0deg, #F6A8A6, #F6A8A6);
-  outline: 1px solid red;
-}
+
 
 .page_footer {
   display: grid;
