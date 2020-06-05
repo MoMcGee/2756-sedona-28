@@ -267,11 +267,6 @@ overflow: hidden;
 .filters {
   color: var(--basic_white);
   background-color: var(--light_gray);
-
-   /* Временная заглушка */
-  min-height: 217px;
-  background: linear-gradient(0deg, #F6A8A6, #F6A8A6);
-  outline: 1px solid red;
 }
 
 .filters ul {
