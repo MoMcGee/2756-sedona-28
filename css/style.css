@@ -617,13 +617,40 @@ overflow: hidden;
 }
 
 .hotel_rating {
+  display: flex;
+  flex-direction: column;
+  -ms-align-items: flex-end;
+  align-items: flex-end;
   margin-left: auto;
   margin-right: 73px;
 }
 
+.stars {
+  width: 19px;
+  height: 17px;
+  margin-bottom: 47px;
+  background-image: url(../img/star.svg);
+  background-repeat: space;
+}
+
+.two_stars {
+  width: 40px;
+}
+
+.three_stars {
+  width: 65px;
+}
+
+.four_stars {
+  width: 90px;
+}
+
 .rating {
-  margin-top: 93px;
+  padding: 3px 12px;
+  font-size: 14px;
+  line-height: 21px;
   color: #666666;
+  background-color: var(--white_smoke);
 }
 
 
