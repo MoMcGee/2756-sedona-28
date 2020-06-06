@@ -264,6 +264,11 @@ overflow: hidden;
   background-color: var(--active_brown);
 }
 
+.map {
+  height: 473px;
+  overflow: hidden;
+}
+
 .filters {
   height: 217px;
 
@@ -658,7 +663,7 @@ overflow: hidden;
 .page_footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 36px 0;
+  padding: 23px 55px;
   line-height: 26px;
 }
 
@@ -687,18 +692,27 @@ overflow: hidden;
 }
 
 .contacts .phone {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
-.social_links a {  display: inline-block;
+.social_links {
+  padding-top: 13px;
+}
+
+.social_links a {
+  display: inline-block;
   width: 46px;
   height: 48px;
   background-color: var(--basic_blue);
 }
 
+.copyright {
+  padding-top: 20px;
+}
+
 .modal_search {
   width: 458px;
-
+  margin: 0 auto;
   padding: 55px;
   background-color: var(--basic_white);
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
