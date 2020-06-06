@@ -26,13 +26,12 @@
       <section class="filters">
          <h2 class="visually_hidden">Фильтр поиска гостиницы</h2>
         <form action="https://echo.htmlacademy.ru" method="get" class="filter">
-          <fieldset class="filter_item">
+          <fieldset class="filter_item amenities_list">
             <legend>Инфраструктура:</legend>
             <ul>
               <li class="filter_option">
                 <input type="checkbox" class="visually_hidden filter_input filter_input_checkbox" name="pool_option" id="pool_option">
                 <label for="pool_option">Бассейн</label>
-
               </li>
               <li class="filter_option">
               <input type="checkbox" class="visually_hidden filter_input filter_input_checkbox" name="parking_option" id="parking_option">
@@ -44,7 +43,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter_item">
+          <fieldset class="filter_item amenities_list">
             <legend>Тип жилья:</legend>
             <ul>
               <li class="filter_option">
@@ -61,16 +60,21 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter_item">
-            <legend>Стоимость в сутки (Р):</legend>
-            <div class="price_controls">
-              <label for="min_price" class="min_price">
-                от <input name="min_price" type="text" value="0" id="min_price"></label>
-              <label for="max_price" class="max_price">до <input name="max_price" type="text" value="3000" id="max_price"></label>
-            </div>
-          <span>Здесь будет выбор диапазона цен</span>
-          </fieldset>
-          <button class="btn filter_btn">Показать</button>
+          <fieldset class="filter_range">
+              <legend class="filter_range_title">Стоимость в сутки (р):</legend>
+              <div class="price_controls">
+                <label class="min_price">от <input type="text" name="min_price" value="0"></label>
+                <label class="max_price">до <input type="text" name="max_price" value="3000"></label>
+              </div>
+              <div class="range_controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range_toggle range_toggle_min"></div>
+                <div class="range_toggle range_toggle_max"></div>
+              </div>
+              <button class="filter_btn" type="submit">Показать</button>
+            </fieldset>
         </form>
       </section>
       <section class="results">
