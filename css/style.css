@@ -275,7 +275,7 @@ overflow: hidden;
 .filters .filter {
   display: flex;
   justify-content: flex-start;
-  padding: 26.5px 73px 32px;
+  padding: 25px 60px 32px;
 }
 
 .filters ul {
@@ -285,48 +285,48 @@ overflow: hidden;
 }
 
 .filters fieldset {
-  margin-right: 90px;
+  margin-right: 95px;
   border: none;
 }
 
-.filters fieldset:last-child {
-  margin-left: auto;
+.filters fieldset:nth-child(2) {
   margin-right: 0;
 }
 
 .filters legend {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   font-size: 16px;
   font-weight: 700;
 }
 
 .amenities_list label {
-  margin-left: 38px;
+  margin-left: 40px;
 }
 
 .filter_option {
   margin-bottom: 25px;
 }
 
-.filter_range {
-  width: 330px;
-
+.filters .filter_range {
+  width: 317px;
+  margin-left: auto;
+  margin-right: 0;
   color: var(--basic_white);
   text-transform: uppercase;
   border: none;
 }
 
 .filter_range legend {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 21px;
 }
 
 .price_controls {
   position: relative;
-  height: 36px;
+  height: 30px;
   margin-bottom: 20px;
 
   font-size: 0;
@@ -352,7 +352,7 @@ overflow: hidden;
   display: inline-block;
 
   font-size: 14px;
-  line-height: 38px;
+  line-height: 26px;
   vertical-align: top;
   cursor: pointer;
 }
@@ -360,7 +360,7 @@ overflow: hidden;
 .price_controls .min_price,
 .price_controls .max_price {
   width: 90px;
-  padding-left: 65px;
+  padding-left: 60px;
 }
 
 .price_controls input {
