@@ -540,7 +540,7 @@ overflow: hidden;
   display: flex;
   justify-content: flex-start;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -551,6 +551,7 @@ overflow: hidden;
 
 .hotel_title {
   display: block;
+  margin-top: -6px;
   margin-bottom: 7px;
   font-size: 21px;
   line-height: 26px;
@@ -564,15 +565,25 @@ overflow: hidden;
 }
 
 .hotel_title:active {
-  color: var(--opacity_black)
+  color: var(--opacity_black);
+}
+
+.hotel_info_wrapper {
+  display: flex;
+}
+
+.hotel_row {
+  margin-right: 6px;
 }
 
 .hotel_row span {
-  margin-right: 9px;
+  display: block;
+  margin-bottom: 14px;
   color: var(--dark_gray);
 }
 
 .hotel_info_btn {
+  display: block;
   padding: 3px 16px;
   color: var(--basic_white);
   background-color: var(--basic_blue);
@@ -590,6 +601,7 @@ overflow: hidden;
 
 
 .book_btn {
+  display: block;
   padding: 3px 16px;
   color: var(--basic_white);
   background-color: var(--basic_brown);
@@ -610,6 +622,7 @@ overflow: hidden;
 }
 
 .rating {
+  margin-top: 93px;
   color: #666666;
 }
 
