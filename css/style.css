@@ -264,35 +264,180 @@ overflow: hidden;
   background-color: var(--active_brown);
 }
 
+.map {
+  height: 473px;
+  overflow: hidden;
+}
+
 .filters {
+  height: 217px;
+
   color: var(--basic_white);
   background-color: var(--light_gray);
+  background-image: url(../img/filters_bg.jpg);
+}
 
-   /* Временная заглушка */
-  min-height: 217px;
-  background: linear-gradient(0deg, #F6A8A6, #F6A8A6);
-  outline: 1px solid red;
+.filters .filter {
+  display: flex;
+  justify-content: flex-start;
+  padding: 25px 60px 32px;
 }
 
 .filters ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .filters fieldset {
+  margin-right: 95px;
   border: none;
 }
 
+.filters fieldset:nth-child(2) {
+  margin-right: 0;
+}
+
 .filters legend {
+  margin-bottom: 20px;
   font-size: 16px;
   font-weight: 700;
 }
 
+.amenities_list label {
+  margin-left: 40px;
+}
+
+.filter_option {
+  margin-bottom: 25px;
+}
+
+.filters .filter_range {
+  width: 317px;
+  margin-left: auto;
+  margin-right: 0;
+  color: var(--basic_white);
+  text-transform: uppercase;
+  border: none;
+}
+
+.filter_range legend {
+  margin-bottom: 8px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price_controls {
+  position: relative;
+  height: 30px;
+  margin-bottom: 20px;
+
+  font-size: 0;
+
+  border: 2px solid var(--basic_white);
+  border-radius: 2px;
+}
+
+.price_controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background-color: var(--basic_white);
+  transform: translate(-50%, -50%);
+}
+
+.price_controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 26px;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.price_controls .min_price,
+.price_controls .max_price {
+  width: 90px;
+  padding-left: 60px;
+}
+
+.price_controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range_controls {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.range_controls .scale {
+  height: 2px;
+
+  background: var(--opacity_white);
+}
+
+.range_controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: var(--basic_white);
+}
+
+.range_toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid var(--basic_white);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range_toggle_min {
+  left: 0;
+}
+
+.range_toggle_max {
+  left: 80%;
+}
+
+.range_toggle:hover {
+  transform: scale(1.2);
+}
 
 .filter_btn {
-  font-weight: 400;
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+  font-size: 14px;
+  line-height: 21px;
   color: var(--basic_white);
-  background-color: transparent;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  background: transparent;
   border: 2px solid var(--basic_white);
+}
+
+.filter_btn:hover {
+  color: var(--basic_black);
+  background: var(--basic_white);
 }
 
 .sorts_panel {
@@ -313,15 +458,45 @@ overflow: hidden;
   font-weight: 700;
 }
 
+.sorts_panel {
+  display: flex;
+
+  align-items: center;
+  min-height: 86px;
+  width: 1054px;
+  margin: 0 auto;
+}
+
+.search_results p {
+  margin: 0;
+  padding: 0;
+  margin-right: 46px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
 .sort_controls {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 2;
   font-size: 12px;
   line-height: 18px;
   color: var(--basic_black);
 }
 
+.sort_title {
+  margin-right: 40px;
+}
+
 .sort_controls a {
+  margin-right: 40px;
   color: var(--opacity_black);
   border-bottom: 1px dashed var(--basic_blue);
+}
+
+.sort_controls a:last-child {
+  margin-right: 0;
 }
 
 .sort_controls a:hover,
@@ -339,6 +514,25 @@ overflow: hidden;
   border: none;
 }
 
+.icon_up,
+.icon_down {
+  display: inline-block;
+  width: 11px;
+  height: 10px;
+  margin-top: 5px;
+  background-color: var(--basic_blue);
+}
+
+.sort_controls .icon_up {
+  margin-left: auto;
+  margin-right: 12px;
+}
+
+
+
+.results_list {
+  border-top: 1px solid #e5e5e5;
+}
 
 .result_items {
   margin: 0;
@@ -351,7 +545,7 @@ overflow: hidden;
   display: flex;
   justify-content: flex-start;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -362,6 +556,8 @@ overflow: hidden;
 
 .hotel_title {
   display: block;
+  margin-top: -6px;
+  margin-bottom: 7px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -374,14 +570,26 @@ overflow: hidden;
 }
 
 .hotel_title:active {
-  color: var(--opacity_black)
+  color: var(--opacity_black);
+}
+
+.hotel_info_wrapper {
+  display: flex;
+}
+
+.hotel_row {
+  margin-right: 6px;
 }
 
 .hotel_row span {
+  display: block;
+  margin-bottom: 14px;
   color: var(--dark_gray);
 }
 
 .hotel_info_btn {
+  display: block;
+  padding: 3px 16px;
   color: var(--basic_white);
   background-color: var(--basic_blue);
 }
@@ -398,6 +606,8 @@ overflow: hidden;
 
 
 .book_btn {
+  display: block;
+  padding: 3px 16px;
   color: var(--basic_white);
   background-color: var(--basic_brown);
 }
@@ -412,12 +622,40 @@ overflow: hidden;
 }
 
 .hotel_rating {
+  display: flex;
+  flex-direction: column;
+  -ms-align-items: flex-end;
+  align-items: flex-end;
   margin-left: auto;
   margin-right: 73px;
 }
 
+.stars {
+  width: 19px;
+  height: 17px;
+  margin-bottom: 47px;
+  background-image: url(../img/star.svg);
+  background-repeat: space;
+}
+
+.two_stars {
+  width: 40px;
+}
+
+.three_stars {
+  width: 65px;
+}
+
+.four_stars {
+  width: 90px;
+}
+
 .rating {
+  padding: 3px 12px;
+  font-size: 14px;
+  line-height: 21px;
   color: #666666;
+  background-color: var(--white_smoke);
 }
 
 
@@ -425,7 +663,7 @@ overflow: hidden;
 .page_footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 36px 0;
+  padding: 23px 55px;
   line-height: 26px;
 }
 
@@ -454,18 +692,27 @@ overflow: hidden;
 }
 
 .contacts .phone {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
-.social_links a {  display: inline-block;
+.social_links {
+  padding-top: 13px;
+}
+
+.social_links a {
+  display: inline-block;
   width: 46px;
   height: 48px;
   background-color: var(--basic_blue);
 }
 
+.copyright {
+  padding-top: 20px;
+}
+
 .modal_search {
   width: 458px;
-
+  margin: 0 auto;
   padding: 55px;
   background-color: var(--basic_white);
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
