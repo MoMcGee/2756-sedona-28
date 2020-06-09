@@ -305,12 +305,44 @@ overflow: hidden;
 }
 
 .amenities_list label {
-  margin-left: 40px;
+  padding-left: 40px;
 }
 
 .filter_option {
   margin-bottom: 25px;
 }
+
+.filter_input_checkbox {
+  position: absolute;
+}
+
+.filters .check_box {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  margin-left: -40px;
+  background-image: url("../img/checkbox-off.svg");
+}
+
+.filter_input_checkbox:checked + .check_box {
+  width: 27px;
+  background-image: url("../img/checkbox-on.svg");
+}
+
+.filter_input_checkbox:focus + .check_box {
+  width: 27px;
+  background-image: url("../img/checkbox-on.svg");
+}
+
+.filter_input_checkbox:disabled + .check_box {
+  background-image: url("../img/checkbox-off-disabled.svg");
+}
+
+.filter_input_checkbox:checked:disabled + .check_box {
+  width: 27px;
+  background-image: url("../img/checkbox-on-disabled.svg");
+}
+
 
 .filters .filter_range {
   width: 317px;
