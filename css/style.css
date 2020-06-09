@@ -154,7 +154,7 @@ overflow: hidden;
 }
 
 .reasons_intro p {
-  margin-top: 45px;
+  margin-top: 43px;
   margin-bottom: 50px;
   line-height: 26px;
   color: var(--dark_gray);
@@ -179,19 +179,18 @@ overflow: hidden;
 
 
 .reason_item_card {
-  padding: 0 51px;
-  padding-top: 47px;
-  padding-bottom: 54px;
   text-align: center;
 }
 
 .reason_title {
+  margin-top: 45px;
   font-weight: 700;
   font-size: 21px;
-  line-height: 21px;
+  line-height: 22px;
 }
 
 .reason_number {
+  margin-top: 26px;
   margin-bottom: 25px;
 }
 
