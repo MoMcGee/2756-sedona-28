@@ -162,8 +162,8 @@ overflow: hidden;
 
 .reason_items {
   display: grid;
-  grid-template-rows: 256px 330px 256px 256px;
-  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 256px auto 256px auto;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .reason_image_right {
@@ -183,18 +183,21 @@ overflow: hidden;
 }
 
 .reason_title {
-  margin-top: 45px;
+  margin-top: 47px;
   font-weight: 700;
   font-size: 21px;
   line-height: 22px;
 }
 
 .reason_number {
-  margin-top: 26px;
-  margin-bottom: 25px;
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: 25px;
 }
 
 .reason_text {
+  font-size: 14px;
+  line-height: 21px;
   color: var(--dark_gray);
 }
 
@@ -204,15 +207,72 @@ overflow: hidden;
 }
 
 .card_item_blue .reason_text {
+  margin-top: 23px;
   color: var(--basic_white);
 }
 
 .card_item_white {
+  display: flex;
+  flex-direction: column;
+  -ms-align-items: center;
+  align-items: center;
+  padding: 0 50px 81px;
+  outline: 1px solid green;
+}
 
+.card_item_white .reason_title {
+  margin-top: 29px;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 22px;
+}
+
+
+.reason_image.lodging {
+  width: 75px;
+  height: 72px;
+  margin-top: 60px;
+  background-image: url("../img/icon-1.svg");
+  background-repeat: no-repeat;
+}
+
+.reason_image.food {
+  width: 75px;
+  height: 70px;
+  margin-top: 61px;
+  background-image: url("../img/icon-2.svg");
+  background-repeat: no-repeat;
+}
+
+.reason_image.souvenirs {
+  width: 64px;
+  height: 77px;
+  margin-top: 55px;
+  background-image: url("../img/icon-3.svg");
+  background-repeat: no-repeat;
+}
+
+.card_item_white .reason_text {
+  margin: 0;
+  margin-top: 5px;
+  color: var(--dark_gray);
 }
 
 .card_item_grey {
   background-color: #eeeeee;
+}
+
+.card_item_grey .reason_title {
+  margin-top: 46px;
+}
+
+.card_item_grey .reason_number {
+  margin-top: 24px;
+}
+
+.card_item_grey .reason_text {
+  margin-top: 22px;
+  margin-bottom: 55px;
 }
 
 
@@ -229,7 +289,8 @@ overflow: hidden;
 }
 
 .hotels_search p {
-  margin-top: 30px;
+  margin-top: 34px;
+  font-size: 14px;
   line-height: 24px;
   color: var(--dark_gray);
 }
