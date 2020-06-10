@@ -217,7 +217,6 @@ overflow: hidden;
   -ms-align-items: center;
   align-items: center;
   padding: 0 50px 81px;
-  outline: 1px solid green;
 }
 
 .card_item_white .reason_title {
@@ -606,13 +605,28 @@ overflow: hidden;
   border: none;
 }
 
-.icon_up,
-.icon_down {
+.sort_controls .icon_up,
+.sort_controls .icon_down {
   display: inline-block;
   width: 11px;
   height: 10px;
   margin-top: 5px;
-  background-color: var(--basic_blue);
+  border-bottom: none;
+}
+
+.icon_up:hover svg path,
+.icon_down:hover svg path {
+  fill: var(--basic_black);
+}
+
+.icon_up:active svg path,
+.icon_down:active svg path {
+  fill: var(--basic_blue);
+}
+
+.icon_up.sort_active svg path,
+.icon_down.sort_active svg path {
+  fill: var(--basic_blue);
 }
 
 .sort_controls .icon_up {
@@ -726,7 +740,7 @@ overflow: hidden;
   width: 19px;
   height: 17px;
   margin-bottom: 47px;
-  background-image: url(../img/star.svg);
+  background-image: url("../img/star.svg");
   background-repeat: space;
 }
 
@@ -754,7 +768,7 @@ overflow: hidden;
 
 .page_footer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   padding: 23px 55px;
   line-height: 26px;
 }
@@ -788,18 +802,58 @@ overflow: hidden;
 }
 
 .social_links {
+  display: flex;
+  justify-content: center;
   padding-top: 13px;
 }
 
 .social_links a {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
   width: 46px;
   height: 48px;
+  margin-right: 6px;
   background-color: var(--basic_blue);
+  text-align: center;
+}
+
+.social_links a:last-child {
+  margin-right: 0;
+}
+
+.social_icon:active path {
+  fill: #87B5D1;
+}
+
+.social_links a:hover {
+  background-color: var(--hover_blue);
+}
+
+.social_links a:active {
+  background-color: var(--active_blue);
 }
 
 .copyright {
-  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.dev_logo {
+  margin-left: 8px;
+}
+
+.dev_logo:hover path {
+  fill: var(--basic_blue);
+}
+
+.dev_logo:active path {
+  fill: #BDBBBC;
 }
 
 .modal_search {
