@@ -91,7 +91,7 @@ input {
 }
 
 button,
-select { /* 1 */
+select {
   text-transform: none;
 }
 
@@ -159,7 +159,7 @@ textarea {
 }
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; 
+  -webkit-appearance: button;
   font: inherit;
 }
 

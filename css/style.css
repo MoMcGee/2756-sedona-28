@@ -388,11 +388,6 @@ overflow: hidden;
   background-image: url("../img/checkbox-on.svg");
 }
 
-.filter_input_checkbox:focus + .check_box {
-  width: 27px;
-  background-image: url("../img/checkbox-on.svg");
-}
-
 .filter_input_checkbox:disabled + .check_box {
   background-image: url("../img/checkbox-off-disabled.svg");
 }
