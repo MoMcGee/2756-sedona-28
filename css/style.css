@@ -585,8 +585,7 @@ overflow: hidden;
   margin-right: 0;
 }
 
-.sort_controls a:hover,
-.sort_controls a:focus {
+.sort_controls a:hover {
   color: var(--basic_blue);
 }
 
@@ -700,7 +699,7 @@ overflow: hidden;
 }
 
 .hotel_info_btn:active {
-  color: var(--opacity_black)
+  color: var(--opacity_white);
   background-color: var(--active_blue);
 }
 
@@ -718,7 +717,7 @@ overflow: hidden;
 }
 
 .book_btn:active {
-  color: var(--opacity_black)
+  color: var(--opacity_white);
   background-color: var(--active_brown);
 }
 
@@ -820,7 +819,8 @@ overflow: hidden;
 }
 
 .social_icon:active path {
-  fill: #87B5D1;
+  fill: red;
+  /*fill: #87B5D1;*/
 }
 
 .social_links a:hover {
@@ -891,5 +891,13 @@ overflow: hidden;
   background-color: var(--basic_blue);
 }
 
+.modal_btn_search:hover {
+  background-color: var(--hover_blue);
+}
+
+.modal_btn_search:active {
+  color: var(--opacity_white);
+  background-color: var(--active_blue);
+}
 
 
