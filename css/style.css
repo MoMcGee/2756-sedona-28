@@ -818,18 +818,19 @@ overflow: hidden;
   margin-right: 0;
 }
 
-.social_icon:active path {
-  fill: red;
-  /*fill: #87B5D1;*/
+.social_links a:active {
+  background-color: var(--active_blue);
 }
 
 .social_links a:hover {
   background-color: var(--hover_blue);
 }
 
-.social_links a:active {
-  background-color: var(--active_blue);
+.social_links a:active .social_icon path {
+  fill: #87B5D1;
 }
+
+
 
 .copyright {
   display: flex;
