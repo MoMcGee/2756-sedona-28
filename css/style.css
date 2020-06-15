@@ -66,6 +66,7 @@ overflow: hidden;
   position: relative;
 }
 
+/*Главное меню*/
 
 .main_menu ul {
   display: flex;
@@ -132,6 +133,8 @@ overflow: hidden;
   color: var(--basic_brown);
 }
 
+/* Промо-изображение на главной */
+
 .promo_image {
   min-height: 509px;
   background-image:
@@ -140,6 +143,8 @@ overflow: hidden;
   background-position: center bottom, center top;
   background-repeat: no-repeat no-repeat;
 }
+
+/* Блок преимуществ */
 
 .reasons_intro {
   text-align: center;
@@ -274,6 +279,7 @@ overflow: hidden;
   margin-bottom: 55px;
 }
 
+/* Блок поиска гостиницы */
 
 .hotels_search {
   text-align: center;
@@ -324,9 +330,146 @@ overflow: hidden;
 }
 
 .map {
+  position: relative;
   height: 473px;
   overflow: hidden;
 }
+
+/* Окно поиска гостиницы */
+
+.modal_search {
+  display: block;
+}
+
+.search_form {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 284px);
+  display: flex;
+  flex-wrap: wrap;
+  width: 568px;
+  height: 395px;
+  margin: 0 auto;
+  padding: 55px;
+  font-weight: 700;
+  box-sizing: border-box;
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  background-color: var(--basic_white);
+  z-index: 99;
+}
+
+.search_form_row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 29px;
+  box-sizing: border-box;
+}
+
+.search_form_row:first-child {
+  margin-top: 0;
+}
+
+
+.search_form_row label  {
+  flex-grow: 2;
+  margin-right: 22px;
+  white-space: nowrap;
+}
+
+.search_form input {
+  flex-grow: 1;
+  width: 308px;
+  min-height: 38px;
+  padding-left: 12px;
+  background-color: var(--white_smoke);
+  border: none;
+  box-sizing: border-box;
+}
+
+.search_form input[value] {
+  font-weight: bold;
+  color: var(--basic_black);
+  text-transform: uppercase;
+}
+
+.btn_calendar {
+  width: 38px;
+  height: 38px;
+  background-image: url("../img/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: var(--white_smoke);
+  border: none;
+}
+
+.form_half_row {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+
+label.adult_numbers {
+  margin-right: 42px;
+  box-sizing: border-box;
+}
+
+label.child_numbers {
+  margin-right: 30px;
+  margin-left: 53px;
+}
+
+input.adult,
+input.child {
+  width: 38px;
+  height: 38px;
+
+  font-size: 14px;
+  line-height: 26px;
+  border: none;
+  text-align: center;
+  background-color: var(--white_smoke);
+  box-sizing: border-box;
+}
+
+
+
+.btn_numbers {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  background-color: var(--white_smoke);
+  border: none;
+  box-sizing: border-box;
+}
+
+.btn_minus {
+  background-image: url("../img/minus.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.btn_plus {
+  background-image: url("../img/plus.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.modal_btn_search {
+  display: block;
+  width: 100%;
+  height: 26px;
+  margin-top: 53px;
+  font-size: 21px;
+  line-height: 26px;
+  padding: 16px 0;
+  color: var(--basic_white);
+  background-color: var(--basic_blue);
+  border: none;
+}
+
+/* Фильтр поиска гостиницы */
 
 .filters {
   height: 217px;
@@ -526,6 +669,9 @@ overflow: hidden;
   background: var(--basic_white);
 }
 
+
+/* Панель сортировки */
+
 .sorts_panel {
   display: flex;
   align-items: center;
@@ -629,6 +775,7 @@ overflow: hidden;
 }
 
 
+/* Блок результатов поиска гостиницы */
 
 .results_list {
   border-top: 1px solid #e5e5e5;
@@ -758,7 +905,7 @@ overflow: hidden;
   background-color: var(--white_smoke);
 }
 
-
+/* Подвал */
 
 .page_footer {
   display: grid;
@@ -850,59 +997,6 @@ overflow: hidden;
 
 .dev_logo:active path {
   fill: #BDBBBC;
-}
-
-.modal_search {
-  width: 458px;
-  margin: 0 auto;
-  padding: 55px;
-  background-color: var(--basic_white);
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
-}
-
-.search_form {
-  display: flex;
-  flex-direction: column;
-}
-
-.modal_search label {
-  margin-right: 23px;
-  font-weight: bold;
-  line-height: 26px;
-}
-
-.search_form input {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.search_form input[value] {
-  padding: 6px 0;
-  padding-left: 12px;
-  font-weight: bold;
-  color: var(--basic_black);
-  text-transform: uppercase;
-}
-
-.search_form input.adult {
-  margin-right: 53px;
-}
-
-.modal_btn_search {
-  display: block;
-  margin-top: 54px;
-  padding: 16px 121px;
-  color: var(--basic_white);
-  background-color: var(--basic_blue);
-}
-
-.modal_btn_search:hover {
-  background-color: var(--hover_blue);
-}
-
-.modal_btn_search:active {
-  color: var(--opacity_white);
-  background-color: var(--active_blue);
 }
 
 

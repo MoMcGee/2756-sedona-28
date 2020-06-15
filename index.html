@@ -87,6 +87,36 @@
 
         <div class="map">
           <img src="img/map.jpg" width="1199" height="594" alt="Карта расположения Седоны в штате Аризона">
+          <section class="modal_search">
+            <form class="search_form" action="https://echo.htmlacademy.ru" method="get">
+            <div class="search_form_row">
+              <label for="arrival_date">Дата заезда:</label>
+              <input class="arrival" type="text" name="arrival_date" id="arrival_date" value="24 апреля 2017">
+              <button class="btn_calendar"></button>
+            </div>
+            <div class="search_form_row">
+              <label for="departure_date">Дата выезда:</label>
+              <input class="departure" type="text" name="departure_date" id="departure_date" value="4 июля 2017">
+              <button class="btn_calendar"></button>
+            </div>
+            <div class="search_form_row">
+              <div class="form_half_row">
+                <label for="adult" class="adult_numbers">Взрослые:</label>
+                <button type="button" class="btn_numbers btn_minus"></button>
+                <input class="adult" type="number" min="1" max="100" value="2" id="adult" readonly>
+                <button type="button" class="btn_numbers btn_plus"></button>
+              </div>
+              <div class="form_half_row">
+                <label for="child" class="child_numbers">Дети:</label>
+                <button type="button" class="btn_numbers btn_minus"></button>
+                <input class="child" type="number" min="1" max="100" value="0" id="child" readonly>
+                <button type="button" class="btn_numbers btn_plus"></button>
+              </div></div>
+            <a href="hotels.html" class="btn modal_btn_search">Найти</a>
+          </form>
+          </section>
+
+
         </div>
       </section>
     </main>
@@ -114,25 +144,6 @@
       </div>
     </footer>
   </div>
-  <section class="modal modal_search">
-    <h3 class="visually_hidden">Форма поиска гостиницы</h3>
-    <form action="https://echo.htmlacademy.ru" method="get" class="search_form">
-      <div class="search_form_row">
-        <label for="arrival_date">Дата заезда:</label>
-        <input type="text" name="arrival_date" id="arrival_date" value="24 апреля 2017">
-      </div>
-      <div class="search_form_row">
-        <label for="departure_date">Дата выезда:</label>
-        <input type="text" name="departure_date" id="departure_date" value="4 июля 2017">
-      </div>
-      <div class="search_form_row">
-        <label for="adult">Взрослые:</label>
-        <input class="adult" type="text" name="adult" id="adult">
-        <label for="child">Дети:</label>
-        <input class="child" type="text" name="child" id="child">
-      </div>
-      <a href="hotels.html" class="btn modal_btn_search">Найти</a>
-    </form>
-  </section>
+
 </body>
 </html>
