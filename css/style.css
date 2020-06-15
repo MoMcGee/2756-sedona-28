@@ -884,6 +884,10 @@ overflow: hidden;
   text-transform: uppercase;
 }
 
+.search_form input.adult {
+  margin-right: 53px;
+}
+
 .modal_btn_search {
   display: block;
   margin-top: 54px;
