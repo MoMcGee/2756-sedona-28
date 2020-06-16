@@ -338,6 +338,11 @@ overflow: hidden;
 /* Окно поиска гостиницы */
 
 .modal_search {
+  display: none;
+
+}
+
+.modal_show {
   display: block;
 }
 
