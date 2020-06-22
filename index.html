@@ -91,28 +91,28 @@
             <form class="search_form" action="https://echo.htmlacademy.ru" method="get">
             <div class="search_form_row">
               <label for="arrival_date">Дата заезда:</label>
-              <input class="arrival" type="text" name="arrival_date" id="arrival_date" value="24 апреля 2017">
+              <input class="arrival" type="text" name="arrival_date" id="arrival_date" placeholder="24 апреля 2017">
               <button class="btn_calendar"></button>
             </div>
             <div class="search_form_row">
               <label for="departure_date">Дата выезда:</label>
-              <input class="departure" type="text" name="departure_date" id="departure_date" value="4 июля 2017">
+              <input class="departure" type="text" name="departure_date" id="departure_date" placeholder="4 июля 2017">
               <button class="btn_calendar"></button>
             </div>
             <div class="search_form_row">
               <div class="form_half_row">
                 <label for="adult" class="adult_numbers">Взрослые:</label>
                 <button type="button" class="btn_numbers btn_minus"></button>
-                <input class="adult" type="number" min="1" max="100" value="2" id="adult" readonly>
+                <input class="adult" type="number" name="adults" min="1" max="100" placeholder="2" id="adult" value="2" readonly>
                 <button type="button" class="btn_numbers btn_plus"></button>
               </div>
               <div class="form_half_row">
                 <label for="child" class="child_numbers">Дети:</label>
                 <button type="button" class="btn_numbers btn_minus"></button>
-                <input class="child" type="number" min="1" max="100" value="0" id="child" readonly>
+                <input class="child" type="number" name="children" min="1" max="100" placeholder="0" value="0" id="child" readonly>
                 <button type="button" class="btn_numbers btn_plus"></button>
               </div></div>
-            <a href="hotels.html" class="btn modal_btn_search">Найти</a>
+            <button class="btn modal_btn_search" type="submit">Найти</button>
           </form>
           </section>
 
