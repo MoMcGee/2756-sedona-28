@@ -924,6 +924,7 @@ input.child {
   grid-template-columns: repeat(3, 1fr);
   padding: 23px 55px;
   line-height: 26px;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 
@@ -933,7 +934,7 @@ input.child {
   line-height: 26px;
   font-weight: 700;
   color: var(--basic_black);
-  background-color: var(--basic_white);
+
 }
 
 .contacts,
