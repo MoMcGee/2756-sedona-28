@@ -399,6 +399,15 @@ overflow: hidden;
   box-sizing: border-box;
 }
 
+.search_form input:hover {
+  background: #EBEBEB;
+}
+
+.search_form input:focus {
+background: var(--basic_white);
+outline: 2px solid #E5E5E5;
+}
+
 .search_form input[placeholder] {
   font-weight: bold;
   color: var(--basic_black);
@@ -408,11 +417,18 @@ overflow: hidden;
 .btn_calendar {
   width: 38px;
   height: 38px;
-  background-image: url("../img/calendar.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
   background-color: var(--white_smoke);
   border: none;
+  outline: none;
+}
+
+.btn_calendar:hover path,
+.btn_calendar:focus path {
+  fill: var(--basic_black);
+}
+
+.btn_calendar:active path {
+  fill: var(--basic_blue);
 }
 
 .form_half_row {
@@ -448,24 +464,29 @@ input.child {
 
 
 .btn_numbers {
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
   width: 38px;
   height: 38px;
   padding: 0;
   background-color: var(--white_smoke);
   border: none;
   box-sizing: border-box;
+  outline: none;
 }
 
-.btn_minus {
-  background-image: url("../img/minus.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+.btn_numbers:hover rect,
+.btn_numbers:focus rect,
+.btn_numbers:hover path,
+.btn_numbers:focus path {
+  fill: var(--basic_black);
 }
 
-.btn_plus {
-  background-image: url("../img/plus.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+.btn_numbers:active rect,
+.btn_numbers:active path {
+  fill: var(--basic_blue);
 }
 
 .modal_btn_search {
@@ -479,6 +500,17 @@ input.child {
   color: var(--basic_white);
   background-color: var(--basic_blue);
   border: none;
+  outline: none;
+}
+
+.modal_btn_search:hover,
+.modal_btn_search:focus {
+  background-color: var(--hover_blue);
+}
+
+.modal_btn_search:active {
+  color: var(--opacity_white);
+  background-color: var(--active_blue);
 }
 
 /* Фильтр поиска гостиницы */
