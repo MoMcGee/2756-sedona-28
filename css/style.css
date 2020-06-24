@@ -26,7 +26,7 @@ body {
   font-weight: 400;
   color: var(--basic_black);
   text-transform: uppercase;
-  background-color: var(--white_smoke);
+  background-color: var(--basic_white);
 }
 
 
@@ -73,9 +73,8 @@ overflow: hidden;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  width: 1055px;
   min-height: 56px;
-  margin: 0 auto;
+  margin: 0 72px;
   padding: 0;
   list-style: none;
   background-color: var(--basic_white);
@@ -83,30 +82,29 @@ overflow: hidden;
 
 .main_menu li {
   width: 20%;
+  margin: 0;
   text-align: left;
 }
 
-.main_menu li:first-child {
-  margin-right: 30px;
-}
 
 .main_menu li:nth-child(2) {
-  margin-right: auto;
+  margin-right: 180px;
+  padding-left: 16px;
 }
 
 .main_menu li:nth-child(3) {
-  margin-left: auto;
   text-align: right;
+  padding-right: 15px;
 }
 
 .main_menu li:last-child {
-  margin-left: 30px;
   text-align: right;
 }
 
 
 
 .main_menu a {
+  line-height: 26px;
   font-weight: 700;
   color: var(--basic_black);
 }
@@ -124,7 +122,7 @@ overflow: hidden;
   color: var(--basic_blue);
 }
 
-.main_menu a:active {
+.main_menu a:active:not(.logo_image) {
   color: var(--basic_black);
   opacity: 0.3;
 }
@@ -333,18 +331,32 @@ overflow: hidden;
   position: relative;
   height: 473px;
   overflow: hidden;
+  background-image: url("../img/map.jpg");
 }
+
 
 /* Окно поиска гостиницы */
 
 .modal_search {
-  display: block;
-}
-
-.search_form {
   position: absolute;
   top: 0;
   left: calc(50% - 284px);
+  display: none;
+
+}
+
+.modal_show {
+  display: block;
+  animation: dropdown 0.5s linear;
+}
+
+
+.modal_error {
+  animation: shake 0.6s;
+}
+
+
+.search_form {
   display: flex;
   flex-wrap: wrap;
   width: 568px;
@@ -387,7 +399,16 @@ overflow: hidden;
   box-sizing: border-box;
 }
 
-.search_form input[value] {
+.search_form input:hover {
+  background: #EBEBEB;
+}
+
+.search_form input:focus {
+background: var(--basic_white);
+outline: 2px solid #E5E5E5;
+}
+
+.search_form input[placeholder] {
   font-weight: bold;
   color: var(--basic_black);
   text-transform: uppercase;
@@ -396,11 +417,18 @@ overflow: hidden;
 .btn_calendar {
   width: 38px;
   height: 38px;
-  background-image: url("../img/calendar.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
   background-color: var(--white_smoke);
   border: none;
+  outline: none;
+}
+
+.btn_calendar:hover path,
+.btn_calendar:focus path {
+  fill: var(--basic_black);
+}
+
+.btn_calendar:active path {
+  fill: var(--basic_blue);
 }
 
 .form_half_row {
@@ -436,30 +464,35 @@ input.child {
 
 
 .btn_numbers {
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
   width: 38px;
   height: 38px;
   padding: 0;
   background-color: var(--white_smoke);
   border: none;
   box-sizing: border-box;
+  outline: none;
 }
 
-.btn_minus {
-  background-image: url("../img/minus.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+.btn_numbers:hover rect,
+.btn_numbers:focus rect,
+.btn_numbers:hover path,
+.btn_numbers:focus path {
+  fill: var(--basic_black);
 }
 
-.btn_plus {
-  background-image: url("../img/plus.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+.btn_numbers:active rect,
+.btn_numbers:active path {
+  fill: var(--basic_blue);
 }
 
 .modal_btn_search {
   display: block;
   width: 100%;
-  height: 26px;
+  height: 58px;
   margin-top: 53px;
   font-size: 21px;
   line-height: 26px;
@@ -467,6 +500,17 @@ input.child {
   color: var(--basic_white);
   background-color: var(--basic_blue);
   border: none;
+  outline: none;
+}
+
+.modal_btn_search:hover,
+.modal_btn_search:focus {
+  background-color: var(--hover_blue);
+}
+
+.modal_btn_search:active {
+  color: var(--opacity_white);
+  background-color: var(--active_blue);
 }
 
 /* Фильтр поиска гостиницы */
@@ -912,6 +956,7 @@ input.child {
   grid-template-columns: repeat(3, 1fr);
   padding: 23px 55px;
   line-height: 26px;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 
@@ -921,7 +966,7 @@ input.child {
   line-height: 26px;
   font-weight: 700;
   color: var(--basic_black);
-  background-color: var(--basic_white);
+
 }
 
 .contacts,
@@ -999,4 +1044,42 @@ input.child {
   fill: #BDBBBC;
 }
 
+/* Анимация для модального окна */
 
+@keyframes dropdown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-50%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
