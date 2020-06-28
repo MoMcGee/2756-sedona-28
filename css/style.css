@@ -51,14 +51,14 @@ img {
 }
 
 .visually_hidden {
-position: absolute;
-width: 1px;
-height: 1px;
-margin: -1px;
-border: 0;
-padding: 0;
-clip: rect(0 0 0 0);
-overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container {
@@ -107,8 +107,6 @@ overflow: hidden;
 .main_menu li:last-child {
   text-align: right;
 }
-
-
 
 .main_menu a {
   line-height: 26px;
@@ -387,7 +385,6 @@ overflow: hidden;
   box-sizing: border-box;
   box-shadow: 0px 7px 15px var(--form_shadow);
   background-color: var(--basic_white);
-  /*z-index: 99;*/
 }
 
 .search_form_row {
@@ -499,8 +496,6 @@ input[type=number] {
 
 .btn_numbers {
   display: flex;
-  justify-content: center;
-  -ms-align-items: center;
   align-items: center;
   width: 38px;
   height: 38px;
@@ -784,7 +779,6 @@ input[type=number] {
 
 .sorts_panel {
   display: flex;
-
   align-items: center;
   min-height: 86px;
   width: 1054px;
@@ -957,8 +951,6 @@ input[type=number] {
   background-color: var(--active_blue);
 }
 
-
-
 .book_btn {
   display: block;
   padding: 3px 16px;
@@ -980,7 +972,6 @@ input[type=number] {
 .hotel_rating {
   display: flex;
   flex-direction: column;
-  -ms-align-items: flex-end;
   align-items: flex-end;
   margin-left: auto;
   margin-right: 73px;
@@ -1100,7 +1091,6 @@ input[type=number] {
 .copyright {
   display: flex;
   justify-content: center;
-  -ms-align-items: center;
   align-items: center;
   padding-top: 15px;
 }
