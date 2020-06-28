@@ -15,7 +15,8 @@ try {
   isStorageSupport = false;
 }
 
-openFormButton.addEventListener("click", function () {
+openFormButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
   if (modal.classList[1] === "modal_show") {
     modal.classList.add("modal_go-up");
     setTimeout(function() {modal.classList.remove("modal_show");},500);

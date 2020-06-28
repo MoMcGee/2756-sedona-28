@@ -290,8 +290,13 @@ overflow: hidden;
 
 .hotels_search {
   text-align: center;
+  background-color: var(--basic_white);
+  z-index: 3;
 }
 
+.hotels_search_wrapper {
+  z-index: 3;
+}
 
 .hotels_search h2 {
   margin-top: 55px;
@@ -317,11 +322,14 @@ overflow: hidden;
 }
 
 .btn_search {
-
+  position: relative;
+  z-index: 3;
+  display: inline-block;
   margin-top: 30px;
   padding: 30px 138px;
   font-size: 21px;
   line-height: 26px;
+  vertical-align: middle;
   color: var(--basic_white);
   background-color: var(--basic_brown);
   cursor: pointer;
@@ -350,7 +358,6 @@ overflow: hidden;
 
 .modal_search {
   position: absolute;
-  top: 0;
   left: calc(50% - 284px);
   display: none;
 }
@@ -380,7 +387,7 @@ overflow: hidden;
   box-sizing: border-box;
   box-shadow: 0px 7px 15px var(--form_shadow);
   background-color: var(--basic_white);
-  z-index: 99;
+  /*z-index: 99;*/
 }
 
 .search_form_row {
@@ -673,7 +680,11 @@ input[type=number] {
 .price_controls .min_price,
 .price_controls .max_price {
   width: 90px;
-  padding-left: 60px;
+  padding-left: 65px;
+}
+
+.price_controls .max_price {
+  padding-left: 55px;
 }
 
 .price_controls input {
