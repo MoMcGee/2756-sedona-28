@@ -496,6 +496,7 @@ input[type=number] {
 
 .btn_numbers {
   display: flex;
+  justify-content: center;
   align-items: center;
   width: 38px;
   height: 38px;
