@@ -5,9 +5,9 @@
     <title>Гостиницы</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="page catalog_page">
     <div class="container">
       <header class="page_header">
         <nav class="main_menu">
@@ -31,7 +31,7 @@
               <ul>
                 <li class="filter_option">
                   <label>
-                    <input class="visually_hidden filter_input filter_input_checkbox" type="checkbox" name="pool_option" id="pool_option" checked>
+                    <input class="visually_hidden filter_input filter_input_checkbox" type="checkbox" name="pool_option" id="pool_option" checked >
                     <span class="check_box"></span>
                     Бассейн
                   </label>
@@ -88,8 +88,8 @@
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
-                  <div class="range_toggle range_toggle_min" aria-label="Минимум"></div>
-                  <div class="range_toggle range_toggle_max" aria-label="Максимум"></div>
+                  <button class="range_toggle range_toggle_min" type="button" aria-label="Минимум"></button>
+                  <button class="range_toggle range_toggle_max" aria-label="Максимум"></button>
                 </div>
                 <button class="filter_btn" type="submit">Показать</button>
               </fieldset>
@@ -102,7 +102,7 @@
                 <p>Найдено: <span class="results_number">3</span></p>
               </div>
               <div class="sort_controls">
-                <span class="sort_title">Сортировка</span>
+                <span class="sort_title">Сортировка:</span>
                 <a href="#" class="sort_checked">По цене</a>
                 <a href="#">По типу</a>
                 <a href="#">По рейтингу</a>
@@ -191,7 +191,7 @@
       </main>
       <footer class="page_footer">
         <div class="contacts">
-          <a class="hashtag" href="#">#visitSEDONA</a><br>
+          <a class="hashtag" href="#">#visitSEDONA</a>
           <a href="tel:+7495660166" class="phone">тел: +7(495) 666-01-66</a>
         </div>
         <div class="social_links">
