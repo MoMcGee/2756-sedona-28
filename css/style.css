@@ -130,9 +130,12 @@ img {
   opacity: 0.3;
 }
 
-.catalog_page .logo_image:hover img,
-.catalog_page .logo_image:focus img {
-  transform: scale(1.2);
+ svg defs feDropShadow {
+  transition: .4s;
+  flood-color: transparent;
+}
+ svg:hover feDropShadow{
+  flood-color: var(--light_gray);
 }
 
 .main_menu a.active {
@@ -1083,8 +1086,8 @@ input.child {
 
 .contacts a:hover,
 .contacts a:focus {
-  outline: 1px solid var(--opacity_black);
-  outline-offset: 5px;
+  text-shadow: 2px 2px 3px var(--copyright_active);
+  outline: none;
 }
 
 .contacts .phone {
