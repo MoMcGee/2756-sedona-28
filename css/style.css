@@ -117,6 +117,7 @@ img {
   left: calc(50% - 69px);
   width: 138px;
   height: 70px;
+  z-index: 99;
 }
 
 .main_menu a:hover,
@@ -130,11 +131,12 @@ img {
   opacity: 0.3;
 }
 
- svg defs feDropShadow {
+ .catalog_page .logo_image svg defs feDropShadow {
   transition: .4s;
   flood-color: transparent;
 }
- svg:hover feDropShadow{
+
+  .catalog_page .logo_image svg:hover feDropShadow{
   flood-color: var(--light_gray);
 }
 
