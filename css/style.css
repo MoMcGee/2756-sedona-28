@@ -140,7 +140,7 @@ img {
   flood-color: var(--light_gray);
 }
 
-.catalog_page .logo_image svg:focus feDropShadow {
+.catalog_page .logo_image:focus svg feDropShadow {
   flood-color: var(--light_gray);
 }
 
