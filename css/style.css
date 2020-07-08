@@ -131,12 +131,16 @@ img {
   opacity: 0.3;
 }
 
- .catalog_page .logo_image svg defs feDropShadow {
+.catalog_page .logo_image svg defs feDropShadow {
   transition: .4s;
   flood-color: transparent;
 }
 
-  .catalog_page .logo_image svg:hover feDropShadow{
+.catalog_page .logo_image svg:hover feDropShadow {
+  flood-color: var(--light_gray);
+}
+
+.catalog_page .logo_image svg:focus feDropShadow {
   flood-color: var(--light_gray);
 }
 
@@ -1088,8 +1092,12 @@ input.child {
 
 .contacts a:hover,
 .contacts a:focus {
-  text-shadow: 2px 2px 3px var(--copyright_active);
+  color: var(--basic_blue);
   outline: none;
+}
+
+.contacts a:active {
+  color: var(--opacity_black);
 }
 
 .contacts .phone {
